@@ -2,3 +2,6 @@ questions/*
 PDFs/*
 !questions/.gitkeep
 !PDFs/.gitkeep
+exif_remove/*
+!exif_remove/.gitkeep
+!exif_remove/safe/.gitkeep
