@@ -1,5 +1,4 @@
 questions/*
 PDFs/*
-exif_remove/*
-!exif_remove/safe
-exif_remove/safe/*
+!questions/
+!PDFs/
