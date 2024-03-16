@@ -1,4 +1,4 @@
 questions/*
 PDFs/*
-!questions/
-!PDFs/
+!questions/.gitkeep
+!PDFs/gitkeep
