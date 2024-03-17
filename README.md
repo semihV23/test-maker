@@ -12,10 +12,10 @@ Tarih
 Doküman ile ilgili açıklama metni.
 ```
 
-Dosyayı bu formatta düzenledikten sonra yapmamız gereken Python kodunu çalıştırmak. Bunun için aşağıdaki kod ile gereki kütüphaneyi kurmamız gerekiyor.
+Dosyayı bu formatta düzenledikten sonra yapmamız gereken Python kodunu çalıştırmak. Bunun için aşağıdaki kod ile gereki kütüphaneleri kurmamız gerekiyor.
 
 ```
-pip install fpdf2
+pip install -r requirements.txt
 ```
 
 Şimdi kodu çalıştıralım;
