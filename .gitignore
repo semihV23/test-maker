@@ -5,3 +5,4 @@ PDFs/*
 exif_remove/*
 !exif_remove/.gitkeep
 !exif_remove/safe/.gitkeep
+Header.txt
