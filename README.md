@@ -2,7 +2,7 @@
 
 Soru fotoğrafları ile küçük testler hazırlayan bir araç.
 
-Çözdüğüm denemelerde yaptığım yanlış soruları daha sonra tekrardan çözebilmek için bir araya getirmek istedim. Bunu yapmak için önzcelikle soruların fotoğraflarına ihtiyacımız var. Fotoğraflar çekildiği sıra ile teste yerleşecek. (Dosya ismi baz alınıyor.) Bu fotoğrafları sıra ile çekmek önemli. Fotoğrafları çektikten sonra bunları `questions` dizinine atıyoruz. Ardından `Header.txt` dosyasını düzenliyoruz. Dosya formatı şu şekilde olmalı;
+Çözdüğüm denemelerde yaptığım yanlış soruları daha sonra tekrardan çözebilmek için bir araya getirmek istedim. Bunu yapmak için önzcelikle soruların fotoğraflarına ihtiyacımız var. Fotoğraflar çekildiği sıra ile teste yerleşecek. (Dosya ismi baz alınıyor.) Bu fotoğrafları sıra ile çekmek önemli. Fotoğrafları çektikten sonra bunları `questions` dizinine atıyoruz. `Header.txt.template` dosyasının adını `Header.txt` olarak değiştiriyoruz. Ardından `Header.txt` dosyasını düzenliyoruz. Dosya formatı şu şekilde olmalı;
 
 ```
 Doküman Adı
