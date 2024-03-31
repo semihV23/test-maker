@@ -8,6 +8,8 @@ A python code that prepares a test quiz with 4 questions on a page.
 Author: https://github.com/semihV23
 """
 
+print("Working directory:", os.getcwd())
+
 with open("Header.txt", "r", encoding="utf-8") as f:
     header = f.read().split("[[NewLine]]")
 
@@ -23,19 +25,19 @@ pdf = FPDF()
 pdf.add_page()
 pdf.set_text_shaping(True)
 
-pdf.add_font("Poppins", style="", fname="fonts/Poppins/Poppins-Regular.ttf")
-pdf.add_font("Poppins", style="B", fname="fonts/Poppins/Poppins-Bold.ttf")
-pdf.add_font("Poppins", style="I", fname="fonts/Poppins/Poppins-Italic.ttf")
+pdf.add_font("Poppins", style="", fname="./fonts/Poppins/Poppins-Regular.ttf")
+pdf.add_font("Poppins", style="B", fname="./fonts/Poppins/Poppins-Bold.ttf")
+pdf.add_font("Poppins", style="I", fname="./fonts/Poppins/Poppins-Italic.ttf")
 pdf.add_font("Poppins", style="bi",
-             fname="fonts/poppins/Poppins-BoldItalic.ttf")
+             fname="./fonts/Poppins/Poppins-BoldItalic.ttf")
 
-pdf.add_font("DejaVu", style="", fname="fonts/DejaVu/DejaVuSansCondensed.ttf")
+pdf.add_font("DejaVu", style="", fname="./fonts/DejaVu/DejaVuSansCondensed.ttf")
 pdf.add_font("DejaVu", style="B",
-             fname="fonts/DejaVu/DejaVuSansCondensed-Bold.ttf")
+             fname="./fonts/DejaVu/DejaVuSansCondensed-Bold.ttf")
 pdf.add_font("DejaVu", style="I",
-             fname="fonts/DejaVu/DejaVuSansCondensed-Bold.ttf")
+             fname="./fonts/DejaVu/DejaVuSansCondensed-Bold.ttf")
 pdf.add_font("DejaVu", style="bi",
-             fname="fonts/DejaVu/DejaVuSansCondensed-BoldOblique.ttf")
+             fname="./fonts/DejaVu/DejaVuSansCondensed-BoldOblique.ttf")
 
 defaultFontFamily = "Poppins"
 
@@ -63,7 +65,7 @@ for index, image in enumerate(images):
     q_width = 90.0
     q_height = 138.5
 
-    i_width, i_height = Image.open("questions/"+image).size
+    i_width, i_height = Image.open("./questions/"+image).size
 
     if i_width/i_height > q_width/q_height:
         q_height = q_width*(i_height/i_width)
@@ -71,28 +73,28 @@ for index, image in enumerate(images):
     match index % 4:
         case 0:
             pdf.image(
-                "questions/"+image,
+                "./questions/"+image,
                 x=10, y=10,
                 w=q_width, h=q_height,
                 keep_aspect_ratio=True
             )
         case 1:
             pdf.image(
-                "questions/"+image,
+                "./questions/"+image,
                 x=10, y=148.5,
                 w=q_width, h=q_height,
                 keep_aspect_ratio=True
             )
         case 2:
             pdf.image(
-                "questions/"+image,
+                "./questions/"+image,
                 x=110, y=10,
                 w=q_width, h=q_height,
                 keep_aspect_ratio=True
             )
         case 3:
             pdf.image(
-                "questions/"+image,
+                "./questions/"+image,
                 x=110, y=148.5,
                 w=q_width, h=q_height,
                 keep_aspect_ratio=True
@@ -103,5 +105,5 @@ for index, image in enumerate(images):
                 pdf.set_draw_color(r=0, g=0, b=0)
                 pdf.line(x1=105, y1=10, x2=105, y2=287)
 
-pdf.output("PDFs/"+fileName)
+pdf.output("./PDFs/"+fileName)
 print("Done. File saved as:", fileName)
