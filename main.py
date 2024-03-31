@@ -19,6 +19,8 @@ fileName = header[0].lower().replace("\n", "_").replace(
 images = [f for f in os.listdir("questions")
           if os.path.isfile("questions/"+f) and f.lower().endswith((".jpg", ".png"))]
 
+images.sort()
+
 print("Found Images:", images)
 
 pdf = FPDF()
